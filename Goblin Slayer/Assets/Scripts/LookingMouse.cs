@@ -18,7 +18,7 @@ public class LookingMouse : MonoBehaviour {
 
     void Update()
     {
-        if (playerAttackManager.GetLookAt().x < 0)
+        if (playerAttackManager.GetLookAtDirection().x < 0)
         {
             playerTransform.localScale = new Vector3(1, 1, 1);
             shieldTransform.localScale = new Vector3(-originalScale.x, -originalScale.y, 1);

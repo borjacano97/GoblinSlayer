@@ -58,7 +58,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1498557009838686
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rageAmount: 4
-  rageDoll: {fileID: 114448262772225040, guid: 1a3c74c31ddb4e6498eb47b380b42383, type: 2}
+  rageDoll: {fileID: 0}
 --- !u!114 &114886445582720698
 MonoBehaviour:
   m_ObjectHideFlags: 1

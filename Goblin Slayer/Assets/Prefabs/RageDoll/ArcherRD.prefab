@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4725145426001488}
+  - component: {fileID: 114493308765992666}
   - component: {fileID: 95775622231365814}
   - component: {fileID: 212271149724847338}
-  - component: {fileID: 114493308765992666}
   - component: {fileID: 82794225511999686}
   - component: {fileID: 50635692124803844}
   - component: {fileID: 70867781120429120}
@@ -31,7 +31,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4725145426001488
 Transform:
   m_ObjectHideFlags: 1

@@ -113,12 +113,10 @@ GameObject:
   - component: {fileID: 114419056864402416}
   - component: {fileID: 114166184930520186}
   - component: {fileID: 114581975606648346}
-  - component: {fileID: 114675709822883404}
   - component: {fileID: 114933360586781642}
   - component: {fileID: 114761650955024252}
   - component: {fileID: 114499046668497258}
   - component: {fileID: 114115490924361398}
-  - component: {fileID: 114685831386993830}
   - component: {fileID: 114251904052045212}
   - component: {fileID: 114872741209323264}
   - component: {fileID: 114439418763432236}
@@ -819,7 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b13c79552f2da46901c994009f2f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ModeState: 0
+  modeState: 0
   autoManaNormal: 10
   autoManaBattle: 5
   autoManaCritic: 20
@@ -868,38 +866,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldTransform: {fileID: 4202408220626644}
---- !u!114 &114675709822883404
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1701429475252052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d05098cc84d454545ad5b96c1a500e8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftKey: 97
-  rightKey: 100
-  jumpKey: 32
-  switchModeKey: 119
-  attackKey: 323
-  defendKey: 324
-  menuKey: 27
-  defending: 0
---- !u!114 &114685831386993830
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1701429475252052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ebd30ee6e2af8946b926f1a49905f9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 4783127434717956}
-  aura: {fileID: 95944869932909442}
 --- !u!114 &114753241285900110
 MonoBehaviour:
   m_ObjectHideFlags: 1

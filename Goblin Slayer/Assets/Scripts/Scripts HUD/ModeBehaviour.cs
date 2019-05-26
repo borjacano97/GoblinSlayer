@@ -2,15 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerAttackManager))]
 public class ModeBehaviour : MonoBehaviour {
 
-    PlayerAttackManager mode;
-
-    private void Start()
-    {
-        mode = GameObject.Find("Player").GetComponent<PlayerAttackManager>();
-    }
+    public PlayerAttackManager mode;
 
     private void Update()
     {

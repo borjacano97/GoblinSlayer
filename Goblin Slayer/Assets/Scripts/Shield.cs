@@ -16,7 +16,7 @@ public class Shield : MonoBehaviour {
     }
     void Update()
     {
-        ShieldMovement(playerAttackManager.GetLookAt());
+        ShieldMovement(playerAttackManager.GetLookAtDirection());
     }
 
     /// <summary>

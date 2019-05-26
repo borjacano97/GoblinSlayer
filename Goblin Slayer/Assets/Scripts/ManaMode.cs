@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class ManaMode : MonoBehaviour
 {
-    public ManaState ModeState;
+    public ManaState modeState;
     private PlayerAttackManager pl;
-    public enum ManaState { Normal, Battle, Critic }
+    public enum ManaState { NORMAL, BATTLE, CRITIC }
     private Mana mn;
     private Health health;
     public float autoManaNormal;
     public float autoManaBattle;
     public float autoManaCritic;
     public float IncrementoModoGuerrero;
-    void Start()
+
+    private void Start()
     {
         pl = GetComponent<PlayerAttackManager>();
         mn = GetComponent<Mana>();
@@ -22,33 +23,33 @@ public class ManaMode : MonoBehaviour
 
     public void ChangueRegenMana()
     {
-        switch (ModeState)
+        switch (modeState)
         {
-            case ManaState.Normal:
+            case ManaState.NORMAL:
                 mn.autoManaRegenRate = autoManaNormal;
                 if (health.GetHP() < health.maxHealth * 3.0f / 4.0f)
 
-                { ModeState = ManaState.Battle; }
+                { modeState = ManaState.BATTLE; }
                 break;
-            case ManaState.Battle:
+            case ManaState.BATTLE:
                 mn.autoManaRegenRate = autoManaBattle;
 
                 if (health.GetHP() < health.maxHealth * 1.0f / 4.0f)
                 {
-                    ModeState = ManaState.Critic;
+                    modeState = ManaState.CRITIC;
                 }
-                else if (health.GetHP() >= health.maxHealth * 3.0f / 4.0f) ModeState = ManaState.Normal;
+                else if (health.GetHP() >= health.maxHealth * 3.0f / 4.0f) modeState = ManaState.NORMAL;
                 break;
-            case ManaState.Critic:
+            case ManaState.CRITIC:
                 mn.autoManaRegenRate = autoManaCritic;
                 if (health.GetHP() > health.maxHealth * 1 / 4)
                 {
 
-                    ModeState = ManaState.Battle;
+                    modeState = ManaState.BATTLE;
                 }
                 break;
         }
-        if (pl.GetMode() == 0)
+        if (pl.CurrentMode == PlayerAttackManager.Mode.MELEE)
         {
             mn.autoManaRegenRate *= IncrementoModoGuerrero;
         }
